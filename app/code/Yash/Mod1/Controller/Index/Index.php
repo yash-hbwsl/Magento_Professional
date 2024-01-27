@@ -23,5 +23,6 @@ class Index extends \Magento\Framework\App\Action\Action
     public function execute()
     {
         $this->test->displayParams();
+        // dump(json_encode($this->test->displayParams()));
     }
 }
