@@ -1,0 +1,16 @@
+<?php
+
+use MageMastery\Popup\ViewModel\PopupViewModel;
+use Magento\Framework\View\Element\Template;
+
+/** @var Template $block */
+/** @var PopupViewModel $viewModel */
+$viewModel = $block->getData('view_model');
+$popup = $viewModel->getPopup();
+?>
+<div data-bind="mageInit: {
+    'MageMastery_Popup/js/popup':{
+        'timeout': <?= /* @noEscape */ $popup->getTimeout(); ?>,
+        'content': '<?= $popup->getContent(); ?>'
+    }}">
+</div>
