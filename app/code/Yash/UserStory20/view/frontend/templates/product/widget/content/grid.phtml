@@ -45,7 +45,6 @@ use Magento\Framework\App\Action\Action;
                                 <?php if ($templateType) : ?>
                                     <?= $block->getReviewsSummaryHtml($_item, $templateType) ?>
                                 <?php endif; ?>
-
                                 <?= $block->getProductPriceHtml($_item, $type) ?>
 
                                 <?= $block->getProductDetailsHtml($_item) ?>
@@ -70,7 +69,7 @@ use Magento\Framework\App\Action\Action;
                                                             <div class="stock available"><span><?= $block->escapeHtml(__('In stock')) ?></span></div>
                                                         <?php else : ?>
                                                             <a href="/contact">
-                                                                <div class="stock unavailable"><span><?= $block->escapeHtml(__('Call for Availabiity')) ?></span></div>
+                                                                <div class="stock unavailable"><span><?= $block->escapeHtml(__('Call for Availability')) ?></span></div>
                                                             </a>
                                                         <?php endif; ?>
                                                     <?php endif; ?>

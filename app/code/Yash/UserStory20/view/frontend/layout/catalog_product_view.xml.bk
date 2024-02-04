@@ -6,6 +6,8 @@
     <body>        
         <referenceContainer name="product.info.form.content">
             <referenceBlock class="Magento\Catalog\Block\Product\View" name="product.info.addtocart"  template="Yash_UserStory20::product/view/addtocart.phtml"/>
+            <referenceBlock class="Magento\Catalog\Block\Product\View\Options\Type\DefaultType" name="product.info.options.default" template="Yash_UserStory20::product/view/options/type/default.phtml"/>
+
         </referenceContainer>  
     </body>
 </page>
