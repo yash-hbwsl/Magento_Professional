@@ -1,0 +1,10 @@
+<?php
+$helper = $this->helper(\Yash\UserStory16\Block\Data::class);
+$colorValue = $helper->getConfig("extension/general/vendor_select_color");
+?>
+
+<style>
+    body {
+        background-color: <?php echo $colorValue; ?>;
+    }
+</style>

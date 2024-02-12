@@ -1,0 +1,23 @@
+<?xml version="1.0"?>
+<config xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" 
+        xsi:noNamespaceSchemaLocation="urn:magento:framework:ObjectManager/etc/config.xsd">
+    <type name="Magento\Framework\Pricing\Adjustment\Collection">
+  <arguments>
+    <argument name="adjustments" xsi:type="array">
+      <item name="devadj" xsi:type="const">Yash\UserStory18\Pricing\Adjustment::ADJUSTMENT_CODE</item>
+    </argument>
+  </arguments>
+</type>
+<type name="Magento\Framework\Pricing\Adjustment\Pool">
+  <arguments>
+     <argument name="adjustments" xsi:type="array">
+        <item name="devadj" xsi:type="array">
+           <item name="className" xsi:type="string">Yash\UserStory18\Pricing\Adjustment</item>
+           <item name="sortOrder" xsi:type="string">10</item>
+        </item>
+     </argument>
+  </arguments>
+</type>
+
+</config>
+
