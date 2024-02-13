@@ -18,6 +18,8 @@ class ProductObserver implements \Magento\Framework\Event\ObserverInterface
         $product = $observer->getProduct();
         $productName = $product->getName();
         $SKU = $product->getSKU();
-        $this->logger->info("Product Viewed:" . $productName . ' ' . $SKU);
+        $this->logger->info("Product Viewed:" . $productName . ' ' . $SKU . ' ' . $product->getId());
+        $this->logger->info($product->getFinalPrice());
+        $this->logger->info($product->getQty());
     }
 }
