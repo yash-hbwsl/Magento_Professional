@@ -2,18 +2,15 @@
 
 namespace Yash\UserStory9\Controller\Adminhtml\Tutorial;
 
-use Magento\Backend\App\Action;
-use Magento\Backend\App\Action\Context;
-use Magento\Framework\View\Result\PageFactory;
+use Magento\Framework\App\Action\HttpGetActionInterface;
 use Magento\Framework\Controller\ResultFactory;
+use Magento\Framework\View\Result\PageFactory;
 
-class Index extends Action
+class Index implements HttpGetActionInterface
 {
-    protected $resultPageFactory;
-
-    public function __construct(Context $context, PageFactory $resultPageFactory)
+    protected PageFactory $resultPageFactory;
+    public function __construct(PageFactory $resultPageFactory)
     {
-        parent::__construct($context);
         $this->resultPageFactory = $resultPageFactory;
     }
 

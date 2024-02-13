@@ -3,6 +3,6 @@
     <menu>
         <add id="Webkul_Hello::manager" title="Webkul Menu" module="Yash_UserStory9" sortOrder="10" resource="Webkul_Hello::manager"/>
         <add id="Webkul_Hello::employee" title="Employee Manager" module="Yash_UserStory9" sortOrder="0" parent="Webkul_Hello::manager"
-                action="hello/tutorial/index" resource="Webkul_Hello::employee"/>
+            action="hello/tutorial/index" resource="Webkul_Hello::employee"/>
     </menu>
 </config>

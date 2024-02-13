@@ -20,7 +20,7 @@
                     <depends>
                         <field id="enable">1</field>
                     </depends>
-                    <validate>integer required-entry</validate>
+                    <validate>required-entry</validate>
                     <comment>Text to be displayed</comment>
                 </field>
             </group>

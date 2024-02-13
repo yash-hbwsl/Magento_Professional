@@ -31,11 +31,15 @@ class GetValue extends Template
     public function getAdminConfigValue()
     {
         // Use the scopeConfig to fetch the configuration value
+        $enabled = $this->scopeConfig->getValue(
+            'mod9/customconfig_group/enable',
+            \Magento\Store\Model\ScopeInterface::SCOPE_STORE
+        );
         $configValue = $this->scopeConfig->getValue(
             'mod9/customconfig_group/text_to_display',
             \Magento\Store\Model\ScopeInterface::SCOPE_STORE
         );
 
-        return $configValue;
+        return $enabled ? $configValue : "";
     }
 }

@@ -2,27 +2,19 @@
 
 namespace Yash\UserStory9\Controller\Index;
 
-use Yash\Mod1\Test\Data;
+use Magento\Framework\App\Action\HttpGetActionInterface;
+use Magento\Framework\View\Result\PageFactory;
 
-class Index extends \Magento\Framework\App\Action\Action
+class Index implements HttpGetActionInterface
 {
-    /**
-     * @var Data
-     */
-    protected $test;
-    /**
-     * @param Data $data
-     * 
-     */
-    public function __construct(\Magento\Framework\App\Action\Context $context, \Magento\Framework\View\Result\PageFactory $pageFactory)
+    protected PageFactory $pageFactory;
+    public function __construct(PageFactory $pageFactory)
     {
         $this->pageFactory = $pageFactory;
-        return parent::__construct($context);
     }
 
     public function execute()
     {
-        // echo 'hello world';
         return $this->pageFactory->create();
     }
 }
