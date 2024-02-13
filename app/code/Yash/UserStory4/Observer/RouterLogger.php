@@ -2,11 +2,13 @@
 
 namespace Yash\UserStory4\Observer;
 
-use Magento\Framework\App\RouterList;
 use Magento\Framework\App\Action\Context;
+use Magento\Framework\App\RouterList;
 use Magento\Framework\Event\Observer;
+use Psr\Log\LoggerInterface;
 
-class RouterLogger  implements \Magento\Framework\Event\ObserverInterface {
+class RouterLogger implements \Magento\Framework\Event\ObserverInterface
+{
 
     /**
      * @var RouterList
@@ -18,23 +20,24 @@ class RouterLogger  implements \Magento\Framework\Event\ObserverInterface {
      * @param RouterList $routerList
      */
     public function __construct(
-        RouterList $routerList
+        RouterList $routerList,
+        protected LoggerInterface $logger
     ) {
         $this->_routerList = $routerList;
+        $this->logger = $logger;
     }
 
-     
     public function execute(Observer $observer)
     {
-        echo ($this->getRoutersString());
-        // die("All routers have been printed");
+        $this->logger->info('Router Logger Executed');
     }
 
     protected function getRoutersString()
     {
         $ret = '';
         foreach ($this->_routerList as $router) {
-            $ret .= get_class($router)."\n";
+            $ret .= get_class($router) . "\n";
+            $this->logger->info($ret);
         }
         return $ret;
     }
