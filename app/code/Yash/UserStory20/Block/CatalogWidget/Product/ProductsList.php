@@ -1,5 +1,6 @@
 <?php
 namespace Yash\UserStory20\Block\CatalogWidget\Product;
+
 class ProductsList extends \Magento\CatalogWidget\Block\Product\ProductsList
 {
     protected function _construct()

@@ -1,7 +1,7 @@
 <?php
 
 use Magento\Framework\App\Action\Action;
-use function PHPSTORM_META\type;
+
 ?>
 <?php
 /**
@@ -52,13 +52,13 @@ $_helper = $block->getData('outputHelper');
                     <div class="product-item-info" id="product-item-info_<?= /* @noEscape */ $_product->getId() ?>" data-container="product-<?= /* @noEscape */ $viewMode ?>">
                         <?php
                         $productImage = $block->getImage($_product, $imageDisplayArea);
-                        if ($pos != null) {
-                            $position = 'left:' . $productImage->getWidth() . 'px;'
-                                . 'top:' . $productImage->getHeight() . 'px;';
-                        }
-                        ?>
-                        <?php // Product Image 
-                        ?>
+                if ($pos != null) {
+                    $position = 'left:' . $productImage->getWidth() . 'px;'
+                        . 'top:' . $productImage->getHeight() . 'px;';
+                }
+                ?>
+                        <?php // Product Image
+                ?>
                         <a href="<?= $escaper->escapeUrl($_product->getProductUrl()) ?>" class="product photo product-item-photo" tabindex="-1">
                             <?= $productImage->toHtml() ?>
                         </a>
@@ -86,8 +86,8 @@ $_helper = $block->getData('outputHelper');
                                                 <?php endforeach; ?>
                                                 <input type="hidden" name="product" value="<?= /* @noEscape */ $postParams['data']['product'] ?>">
                                                 <input type="hidden" name="<?= /* @noEscape */ Action::PARAM_NAME_URL_ENCODED ?>" value="<?=
-                                                                                                                                            /* @noEscape */ $postParams['data'][Action::PARAM_NAME_URL_ENCODED]
-                                                                                                                                            ?>">
+                                                                                                                                    /* @noEscape */ $postParams['data'][Action::PARAM_NAME_URL_ENCODED]
+                                            ?>">
                                                 <?= $block->getBlockHtml('formkey') ?>
                                                 <button type="submit" title="<?= $escaper->escapeHtmlAttr(__('Add to Cart')) ?>" class="action tocart primary" disabled>
                                                     <span><?= $escaper->escapeHtml(__('Add to Cart')) ?></span>
@@ -144,6 +144,6 @@ $_helper = $block->getData('outputHelper');
         </ol>
     </div>
     <?= $block->getChildBlock('toolbar')->setIsBottom(true)->toHtml() ?>
-    <?php // phpcs:ignore Magento2.Legacy.PhtmlTemplate 
+    <?php // phpcs:ignore Magento2.Legacy.PhtmlTemplate
     ?>
 <?php endif; ?>
