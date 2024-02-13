@@ -10,6 +10,7 @@ print_r($blockObj->getSalableQuantityBySku($_product->getData()['sku'])[0]['qty'
 if ($blockObj->getSalableQuantityBySku($_product->getData()['sku'])[0]['qty'] == 0) {
     echo '<a href="/contact"><p class="outofstock">Call for Availability</p></a>';
 ?>
+
 <?php
 }
 ?>

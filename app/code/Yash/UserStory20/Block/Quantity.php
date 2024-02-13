@@ -13,7 +13,8 @@ class Quantity extends Template
         Template\Context $context,
         GetSalableQuantityDataBySku $getSalableQuantityDataBySku,
         array $data = []
-    ) {
+    ) 
+    {
         parent::__construct($context, $data);
         $this->getSalableQuantityDataBySku = $getSalableQuantityDataBySku;
     }
