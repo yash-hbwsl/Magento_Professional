@@ -2,4 +2,5 @@
     <type name="Magento\Catalog\Block\Product\View\Description">
         <plugin name="desc" type="Yash\UserStory5\Plugin\Description" sortOrder="10" disabled="false"/>
     </type>
+    
 </config>

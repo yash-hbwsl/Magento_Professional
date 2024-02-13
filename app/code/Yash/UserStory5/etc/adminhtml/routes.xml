@@ -3,7 +3,7 @@
         xsi:noNamespaceSchemaLocation="urn:magento:framework:App/etc/routes.xsd">
     <router id="admin">
         <route id="tutorial" frontName="tutorial">
-            <module name="Yash_UserStory5" before="Magento_Backend" />
+            <module name="Yash_UserStory5" before="Magento_Backend"  />
         </route>
     </router>
 </config>

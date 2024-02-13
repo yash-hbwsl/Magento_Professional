@@ -7,6 +7,6 @@
             sortOrder='50'
             resource='Yash_UserStory5::tutorial'/>
             <add id="Yash_UserStory5::subitem" title="Custom" module="Yash_UserStory5" sortOrder="0" parent="Yash_UserStory5::tutorial"
-                action="tutorial/tutorial/index" resource="Yash_UserStory5::tutorial"/>
+            action="tutorial/tutorial/index" resource="Yash_UserStory5::tutorial"/>
     </menu>
 </config>
