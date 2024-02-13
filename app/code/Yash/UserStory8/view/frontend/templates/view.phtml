@@ -1,5 +1,5 @@
 <?php
-    $collection = $block->getCollection();
+$collection = $block->getCollection();
 ?>
 <br>
 <hr>
@@ -17,10 +17,10 @@
     <tbody>
         <?php foreach ($collection as $key => $data): ?>
             <tr>
-                <td><?php echo $data['employee_id']; ?></td>
-                <td><?php echo $data['first_name']; ?></td>
-                <td><?php echo $data['last_name']; ?></td>
-                <td><?php echo $data['email_id']; ?></td>
+                <td><?php echo $data['employee_id'];?></td>
+                <td><?php echo $data['first_name'];?></td>
+                <td><?php echo $data['last_name'];?></td>
+                <td><?php echo $data['email_id'];?></td>
             </tr>
         <?php endforeach; ?>
     </tbody>

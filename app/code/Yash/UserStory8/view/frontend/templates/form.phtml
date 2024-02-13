@@ -1,13 +1,6 @@
-<form method="post"  action="<?= $block->getFormAction() ?>" id="my-test-form">
+<form data-mage-init='{"validation":{}}' method="post"  action="<?= $block->getFormAction() ?>" id="my-test-form">
     <fieldset class="fieldset">
         <div class="field note no-label">Enter employee details here</div>
-        
-        <!-- <div class="field empid">
-            <label class="label" for="emp_id"><span>Employee ID</span></label>
-            <div class="control">
-                <input name="employee_id" id="emp_id" title="ID" value="" class="input-text" type="number" required>
-            </div>
-        </div> -->
         
         <div class="field firstname">
             <label class="label" for="first_name"><span>Firstname</span></label>
@@ -26,7 +19,7 @@
         <div class="field email">
             <label class="label" for="email"><span>Email</span></label>
             <div class="control">
-                <input name="email_id" id="email" title="Email" value="" class="input-text" type="email" required>
+                <input data-validate="{required:true, 'validate-email':true}" name="email_id" id="email" title="Email" value="" class="input-text" type="text" required>
             </div>
         </div>
 

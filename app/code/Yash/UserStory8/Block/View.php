@@ -2,10 +2,9 @@
 
 namespace Yash\UserStory8\Block;
 
+use Magento\Framework\View\Element\Template;
 use Magento\Framework\View\Element\Template\Context;
 use Yash\UserStory8\Model\ResourceModel\Employee\Collection as EmployeeCollection;
-use Magento\Framework\View\Element\Template;
-
 
 class View extends Template
 {
@@ -18,7 +17,6 @@ class View extends Template
         $this->collection = $collection;
         parent::__construct($context);
     }
-
 
     public function getCollection()
     {

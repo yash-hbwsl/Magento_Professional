@@ -2,8 +2,8 @@
 
 namespace Yash\UserStory8\Block;
 
+use Magento\Framework\View\Element\Template;
 use Magento\Framework\View\Element\Template\Context;
-use \Magento\Framework\View\Element\Template;
 
 class Save extends Template
 {
@@ -16,7 +16,7 @@ class Save extends Template
 
     public function _prepareLayout()
     {
-        $this->pageConfig->getTitle()->set(__('Employee Form Page'));
+        $this->pageConfig->getTitle()->set(__('Employee Form Page '));
         return parent::_prepareLayout();
     }
 

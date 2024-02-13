@@ -13,7 +13,6 @@ class Save extends \Magento\Framework\App\Action\Action
         PageFactory $resultPageFactory,
         \Magento\Framework\View\Result\PageFactory $pageFactory,
         \Yash\UserStory8\Model\EmployeeFactory $employeeFactory
-
     ) {
         $this->_pageFactory = $pageFactory;
         $this->resultPageFactory = $resultPageFactory;
@@ -33,7 +32,7 @@ class Save extends \Magento\Framework\App\Action\Action
             $employeeModel->save();
             $this->messageManager->addSuccessMessage(__('Data saved successfully'));
         } catch (\Exception $e) {
-            $this->messageManager->addErrorMessage(__('An error occurred while saving data'));
+            $this->messageManager->addErrorMessage(__('An error occurred while saving data!'));
         }
         return $this->_redirect('block/index/index');
     }
