@@ -1,10 +1,11 @@
 <?php
 $helper = $this->helper(\Yash\UserStory16\Block\Data::class);
 $colorValue = $helper->getConfig("extension/general/vendor_select_color");
+$color = $block->escapeHtmlAttributes($colorValue);
 ?>
 
-<style>
+<style type="text/css">
     body {
-        background-color: <?php echo $colorValue; ?>;
+        background-color: <?php /* @noEscape */ echo $color;?>;
     }
 </style>

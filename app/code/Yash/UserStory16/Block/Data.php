@@ -14,11 +14,12 @@ class Data extends AbstractHelper
         $this->scopeConfig = $scopeConfig;
     }
 
-    public function getConfig($configPath)
+    public function getConfig(string $configPath):string
     {
         return $this->scopeConfig->getValue(
             $configPath,
             \Magento\Store\Model\ScopeInterface::SCOPE_STORE
         );
+
     }
 }

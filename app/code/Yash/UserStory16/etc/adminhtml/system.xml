@@ -6,7 +6,7 @@
         </tab>
         <section id="extension" translate="label" sortOrder="10" showInDefault="1" showInWebsite="1" showInStore="1">
             <class>separator-top</class>
-            <label>Colorpicker</label>
+            <label>Colorpicker </label>
             <tab>colorpicker</tab>
             <resource>Yash_UserStory16::config_extension</resource>
             <group id="general" translate="label" type="text" sortOrder="1" showInDefault="1" showInWebsite="1" showInStore="1">

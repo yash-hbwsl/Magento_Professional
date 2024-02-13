@@ -4,6 +4,12 @@ namespace Yash\UserStory16\Block\Adminhtml;
 
 class ColorPicker extends \Magento\Config\Block\System\Config\Form\Field
 {
+    /** @var array<mixed>  $array*/
+    private array $data = [];
+    /**
+     * @param array<int> $data
+     */
+
     public function _prepareLayout()
     {
         $this->pageConfig->addBodyClass('my-class');
@@ -35,6 +41,7 @@ class ColorPicker extends \Magento\Config\Block\System\Config\Form\Field
                 });
             });
             </script>';
+
         return $html;
     }
 }
