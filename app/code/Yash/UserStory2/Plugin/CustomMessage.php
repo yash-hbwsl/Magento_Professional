@@ -18,7 +18,6 @@ class CustomMessage{
     }
 
     public function afterGetName(Product $subject, $result){
-
         if($subject->getFinalPrice()>55 && $subject->getFinalPrice()<60)
         $result.=" On Sale!";
         else if($subject->getFinalPrice()<20)
