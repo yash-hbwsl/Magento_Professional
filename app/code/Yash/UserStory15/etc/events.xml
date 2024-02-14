@@ -1,0 +1,6 @@
+<?xml version="1.0"?>
+<config xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="urn:magento:framework:Event/etc/events.xsd">
+    <event name="checkout_onepage_controller_success_action">
+       <observer name="vendor_module_send_notification1" instance="Yash\UserStory15\Observer\CustomerSales" />
+   </event>
+</config>
