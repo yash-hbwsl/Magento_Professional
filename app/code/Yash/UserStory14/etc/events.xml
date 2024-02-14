@@ -4,6 +4,6 @@
         <observer name="product_save_observer" instance="Yash\UserStory14\Observer\ProductSaveObserver" />
     </event>
      <event name="product_quantity_below_threshold">
-        <observer name="send_product_low_quantity_notification" instance="Yash\UserStory14\Observer\SendProductLowQuantityNotification" />
+        <observer name="send_product_low_quantity_notification" instance="Yash\UserStory14\Observer\SendProductLowQuantityNotification"/>
     </event>
 </config>
