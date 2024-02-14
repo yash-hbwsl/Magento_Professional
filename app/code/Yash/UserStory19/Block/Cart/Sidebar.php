@@ -19,6 +19,7 @@ class Sidebar extends \Magento\Checkout\Block\Cart\Sidebar
     ) {
         $this->productRepository = $productRepository;
         parent::__construct($context, $customerSession, $checkoutSession, $imageHelper, $jsLayoutDataProvider, $data, $serializer);
+
     }
 
     public function getProductById($entityId)

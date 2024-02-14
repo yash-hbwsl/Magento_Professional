@@ -26,6 +26,7 @@
             </span>
         </span>
     </a>
+    
     <?php if ($block->getIsNeedToDisplaySideBar()):?>
         <div class="block block-minicart"
              data-role="dropdownDialog"
@@ -43,18 +44,19 @@
                 <div>
                     <p><?= $block->escapeHtml(__('Cross-sells')) ?></p>
                     <?php $items = $block->getQuote()->getAllItems();
-                        foreach($items as $item) {
-                            $product = $item->getProduct();
-                            $crosssells = array_slice($product->getCrossSellProducts(),0,2);
-                            foreach($crosssells as $crosssell) {
-                                $product = $this->getProductById($crosssell->getId());
-                                 ?>
-                                <a href="<?= $product->getUrlInStore()  ?>">
-                                    <img width="80" height="80" src="<?= $block->getBaseUrl()."media/catalog/product".$product->getImage() ?>" alt="">
-                                    <p><?= $block->escapeHtml($product->getName()) ?></p>
-                                </a>
-                            <?php }
-                    } ?>
+        foreach($items as $item) {
+            $product = $item->getProduct();
+            $crossSellItems = array_slice($product->getCrossSellProducts(), 0, 2);
+            foreach($crossSellItems as $crosssell) {
+                $product = $this->getProductById($crosssell->getId());
+                ?>
+                    <a href="<?= $product->getUrlInStore()  ?>">
+                    <img width="80" height="80" src="<?= $block->getBaseUrl() . "media/catalog/product" . $product->getImage() ?>" alt="">
+                    <p><?= $block->escapeHtml($product->getName()) ?></p>
+                    </a>
+                    <?php
+            }
+        } ?>
                 </div>
             </div>
             <?= $block->getChildHtml('minicart.addons') ?>

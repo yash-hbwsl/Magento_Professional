@@ -3,7 +3,6 @@
     <body>
          <referenceContainer name="header-wrapper">
             <referenceBlock class="Yash\UserStory19\Block\Cart\Sidebar" name="minicart" template="Yash_UserStory19::cart/minicart.phtml">
-                
             </referenceBlock>
         </referenceContainer>
     </body>
